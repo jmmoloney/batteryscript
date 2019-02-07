@@ -7,8 +7,7 @@ else
 	set Pct to (do shell script "pmset -g batt | grep -Eo \"\\d+%\" | cut -d% -f1")
 	if Pct > 10 and Pct ² 20 then
 		display notification "Less than 20% Battery Remaining, plug in soon." with title "Low Battery" sound name "Basso"
-	end if
-	if Pct ² 10 then
+	else if Pct ² 10 then
 		display notification "Less than 10% Battery, plug in now." with title "Critical Battery" sound name "Sosumi"
 	end if
 end if
