@@ -42,14 +42,14 @@ Contains the low-battery notification script as a shell script as well as the `.
 
 #### Notes
 
-Don't forget to make the `.sh` file executable once in your directory with the following command in the terminal `chmod +x /path/batteryScript.keepAlive.sh`.
+* Don't forget to make the `.sh` file executable once in your directory with the following command in the terminal `chmod +x /path/batteryScript.keepAlive.sh`.
 
-If you would like a version that does not run continuously in the background, remove the `sleep` lines from the shell script and change the following in the `plist` file:
+* If you would like a version that does not run continuously in the background, remove the `sleep` lines from the shell script and change the following in the `plist` file:
 
-* change the value of `KeepAlive` to `false`
-* add the following `StartInterval` to the end of your dictionary
+	- change the value of `KeepAlive` to `false`
+	- add the following `StartInterval` to the end of your dictionary
 
-```applescript
-     <key>StartInterval</key>
-     <integer>600</integer>
-```
+   ```applescript
+        <key>StartInterval</key>
+        <integer>600</integer>
+   ```
