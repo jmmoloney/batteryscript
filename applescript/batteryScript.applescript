@@ -1,5 +1,4 @@
-
-set Cap to (do shell script "ioreg -w0 -l | grep ExternalChargeCapable")
+set Cap to (do shell script "ioreg -b -w 0 -f -r -c AppleSmartBattery | grep ExternalConnected")
 tell Cap to set {wallPower} to {last word of paragraph 1}
 if wallPower = "Yes" then
 	return 0
